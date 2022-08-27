@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="700.0" minWidth="700.0" onMouseClicked="#remove" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jlm.hairsalon.controller.TaskController">
+   <children>
+      <fx:include source="sidebar.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane layoutX="157.0" layoutY="100.0" prefHeight="200.0" style="-fx-background-color: #f3bfff; -fx-border-color: #facaf5;" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+      <children>
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tasks information" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="7.0">
+            <font>
+               <Font size="30.0" />
+            </font>
+         </Text>
+         <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Search the task" textAlignment="RIGHT" AnchorPane.rightAnchor="700.0" AnchorPane.topAnchor="45.0">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <TextField fx:id="searchTxt" prefHeight="30.0" prefWidth="310.0" promptText="Typing..." style="-fx-background-color: white; -fx-background-radius: 50;" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="45.0" />
+         <ComboBox fx:id="selectHairdresser" prefHeight="30.0" prefWidth="130.0" promptText="Select hairdresser" stylesheets="@../../../Css/style.css" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="90.0">
+            <styleClass>
+               <String fx:value="list-view" />
+               <String fx:value="combo-box" />
+            </styleClass></ComboBox>
+         <ComboBox fx:id="selectClient" prefHeight="30.0" prefWidth="130.0" promptText="Select client" stylesheets="@../../../Css/style.css" AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="90.0">
+            <styleClass>
+               <String fx:value="list-view" />
+               <String fx:value="combo-box" />
+            </styleClass></ComboBox>
+         <DatePicker fx:id="datePick" prefHeight="30.0" prefWidth="180.0" promptText="Pick a date" stylesheets="@../../../Css/date-picker.css" AnchorPane.leftAnchor="475.0" AnchorPane.topAnchor="90.0">
+            <styleClass>
+               <String fx:value="arrow" />
+               <String fx:value="arrow-button" />
+               <String fx:value="button" />
+               <String fx:value="cell" />
+               <String fx:value="date-picker" />
+               <String fx:value="date-picker-popup" />
+               <String fx:value="label" />
+               <String fx:value="left-arrow" />
+               <String fx:value="month-year-pane" />
+               <String fx:value="right-arrow" />
+               <String fx:value="selected" />
+               <String fx:value="spinner" />
+               <String fx:value="week-number-cell" />
+            </styleClass></DatePicker>
+         <Button fx:id="btnPreview" mnemonicParsing="false" onAction="#onPreview" prefHeight="30.0" prefWidth="90.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Preview" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="145.0">
+            <font>
+               <Font size="14.0" />
+            </font></Button>
+         <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#onDelete" prefHeight="30.0" prefWidth="90.0" styleClass="danger-button" stylesheets="@../../../Css/style.css" text="Delete" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="145.0">
+            <font>
+               <Font size="14.0" />
+            </font></Button>
+         <Button fx:id="btnSave" mnemonicParsing="false" onAction="#onSave" prefHeight="30.0" prefWidth="90.0" styleClass="success-button" stylesheets="@../../../Css/style.css" text="Add task" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="145.0">
+            <font>
+               <Font size="14.0" />
+            </font></Button>
+         <Button fx:id="btnAddService" mnemonicParsing="false" onAction="#onAddService" prefHeight="30.0" prefWidth="115.0" styleClass="success-button" stylesheets="@../../../Css/style.css" text="Add service" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="145.0">
+            <font>
+               <Font size="14.0" />
+            </font></Button>
+      </children>
+   </AnchorPane>
+      <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="300.0">
+         <children>
+            <TableView fx:id="tasksTbl" layoutX="7.0" onMouseClicked="#selectTask" prefHeight="375.0" prefWidth="1043.0" style="-fx-background-color: #e8a2e1; -fx-border-color: #ffe3fc;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columns>
+                  <TableColumn fx:id="IDTblCol" minWidth="20.0" prefWidth="260.0" text="ID" />
+                  <TableColumn fx:id="hairdresserTblCol" minWidth="20.0" prefWidth="260.0" style="-fx-alignment: center;" text="Hairdresser " />
+                  <TableColumn fx:id="clientTblCol" prefWidth="260.0" style="-fx-alignment: center;" text="Client" />
+                  <TableColumn fx:id="dateTblCol" minWidth="20.0" prefWidth="261.0" style="-fx-alignment: center;" text="Date" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

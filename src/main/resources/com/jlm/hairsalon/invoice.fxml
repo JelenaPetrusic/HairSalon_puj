@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jlm.hairsalon.controller.InvoiceController">
+   <children>
+      <AnchorPane prefHeight="220.0" style="-fx-background-color: #bfe1ff; -fx-border-color: lightgrey;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="150.0" text="INVOICE" textAlignment="CENTER" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="223.0" text="HAIR SALON_JL&amp;M" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Label>
+            <Label prefHeight="20.0" prefWidth="223.0" text="MOSTAR" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Label>
+            <Label prefHeight="20.0" prefWidth="223.0" text="+387 63 112 777" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Label>
+            <Label prefHeight="20.0" prefWidth="276.0" text="HAIRSALON_JL&amp;M@FSRE.SUM.BA" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Label>
+            <ImageView fitHeight="110.0" fitWidth="200.0" layoutX="12.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <image>
+                  <Image url="@../../../images/logo.jpg" />
+               </image></ImageView>
+            <Label fx:id="clientNameLbl" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="Name" AnchorPane.bottomAnchor="110.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Label>
+            <Label fx:id="clientAdressLbl" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="Address" AnchorPane.bottomAnchor="90.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Label>
+            <Label fx:id="clientPhoneLbl" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="Phone" AnchorPane.bottomAnchor="70.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Label>
+            <Label fx:id="clientIdLbl" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="CostumerID" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Label>
+            <Label fx:id="invoiceLbl" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="INVOICE#" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Label>
+            <Label fx:id="dateLbl" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="Date" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Label>
+            <Label prefHeight="20.0" prefWidth="80.0" text="CostumerID" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="160.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Label>
+            <Label prefHeight="20.0" prefWidth="80.0" text="INVOICE#" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="160.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Label>
+            <Label prefHeight="20.0" prefWidth="80.0" text="Date" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="160.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="220.0">
+         <children>
+            <TableView fx:id="servicesTbl" style="-fx-background-color: #D3D3D3; -fx-border-color: lightgrey;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columns>
+                  <TableColumn fx:id="idTblCol" minWidth="20.0" prefWidth="126.0" text="Index" />
+                  <TableColumn fx:id="nameTblCol" prefWidth="126.0" style="-fx-alignment: center;" text="Name" />
+                  <TableColumn fx:id="quantityTblCol" prefWidth="126.0" style="-fx-alignment: center;" text="Quantity" />
+                  <TableColumn fx:id="priceTblCol" prefWidth="126.0" style="-fx-alignment: center;" text="Price" />
+                  <TableColumn fx:id="sumTblCol" prefWidth="126.0" style="-fx-alignment: center;" text="Sum" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="150.0" style="-fx-background-color: #bfe1ff; -fx-border-color: lightgrey;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="60.0" text="TOTAL" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label fx:id="totalSumLbl" prefHeight="20.0" prefWidth="130.0" text="TOTAL SUM" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

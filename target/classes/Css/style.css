@@ -1,0 +1,59 @@
+.danger-button
+{
+-fx-background-color: #d9534f;
+    -fx-background-radius: 25;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+.danger-button:hover
+{
+-fx-background-color:#f7163c;
+}
+.combo-box
+{
+-fx-border-color:#ACACAC;
+-fx-border-width:0.5px;
+-fx-border-radius:50px;
+-fx-background-radius:50px;
+}
+.combo-box:hover
+{
+-fx-text-fill:white;
+}
+.list-view
+{
+-fx-border-color:#ACACAC;
+-fx-border-width:0.5px;
+-fx-padding:0px;
+-fx-background-color:white;
+-fx-border-radius:10px 10px 0px 0px;
+-fx-background-radius:10px 10px 0px 0px;
+}
+.success-button
+{
+-fx-background-color: #5cb85c;
+    -fx-background-radius: 25;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+.success-button:hover
+{
+-fx-background-color:#2a9320;
+}
+.info-button
+{
+-fx-background-color: #da64f5;
+-fx-background-radius: 25;
+-fx-background-insets: 0;
+-fx-text-fill: white;
+}
+.info-button:hover
+{
+-fx-background-color:##e6feff;
+}
+.text-field
+{
+-fx-background-color:white;
+-fx-background-radius:30px;
+}
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: #bfe1ff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jlm.hairsalon.controller.LoginController">
+   <children>
+      <TextFlow prefHeight="35.0" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Signup" textAlignment="CENTER" wrappingWidth="222.46484375">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <Label alignment="CENTER" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="First name" textAlignment="RIGHT" AnchorPane.leftAnchor="151.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" prefHeight="30.0" prefWidth="110.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="Last name" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="190.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" prefHeight="30.0" prefWidth="110.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="Adress" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="230.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" prefHeight="30.0" prefWidth="110.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="Phone number" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="270.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" prefHeight="30.0" prefWidth="110.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="Email" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="310.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" prefHeight="30.0" prefWidth="110.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="Username" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="350.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" prefHeight="30.0" prefWidth="110.0" style="-fx-background-radius: 10; -fx-background-color: white;" text="Password" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="390.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="signupName" minWidth="200.0" prefHeight="30.0" stylesheets="@../../../Css/style.css" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="150.0" />
+      <TextField fx:id="signupSurname" prefHeight="30.0" stylesheets="@../../../Css/style.css" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="190.0" />
+      <TextField fx:id="signupAddress" prefHeight="30.0" stylesheets="@../../../Css/style.css" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="230.0" />
+      <TextField fx:id="signupPhoneNumber" prefHeight="30.0" stylesheets="@../../../Css/style.css" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="270.0" />
+      <TextField fx:id="signupEmail" prefHeight="30.0" stylesheets="@../../../Css/style.css" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="310.0" />
+      <TextField fx:id="signupUsername" prefHeight="30.0" stylesheets="@../../../Css/style.css" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="350.0" />
+      <PasswordField fx:id="signupPassword" prefHeight="30.0" stylesheets="@../../../Css/style.css" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="390.0" />
+      <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#signUp" prefHeight="45.0" prefWidth="100.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Sign up" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="460.0">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backToLogin" prefHeight="45.0" prefWidth="110.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Back to login" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="45.0">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

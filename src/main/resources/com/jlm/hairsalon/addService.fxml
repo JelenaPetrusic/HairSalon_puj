@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onMouseClicked="#remove" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #bfe1ff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jlm.hairsalon.controller.AddServiceController">
+   <children>
+       <ComboBox fx:id="selectService" prefHeight="30.0" prefWidth="150.0" promptText="Select service" stylesheets="@../../../Css/style.css" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="25.0">
+           <styleClass>
+               <String fx:value="combo-box" />
+               <String fx:value="list-view" />
+           </styleClass></ComboBox>
+      <TextField fx:id="quantityTxt" prefHeight="30.0" prefWidth="150.0" promptText="Quantity" styleClass="text-field" stylesheets="@../../../Css/style.css" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="70.0" />
+      <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#onSave" prefHeight="30.0" prefWidth="90.0" styleClass="success-button" stylesheets="@../../../Css/style.css" text="Add" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="70.0">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button mnemonicParsing="false" onAction="#onDelete" prefHeight="30.0" prefWidth="90.0" styleClass="danger-button" stylesheets="@../../../Css/style.css" text="Delete" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="70.0">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="btnClose" mnemonicParsing="false" onAction="#closeWindow" prefHeight="30.0" prefWidth="90.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Close" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="40.0">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <TableView fx:id="servicesTbl" onMouseClicked="#selectService" prefHeight="188.0" prefWidth="412.0" style="-fx-background-color: #D3D3De; -fx-border-color: lightgrey;" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="115.0">
+        <columns>
+          <TableColumn fx:id="idTblCol" prefWidth="103.0" text="ID" />
+            <TableColumn fx:id="nameTblCol" minWidth="3.0" prefWidth="103.0" text="Name" />
+            <TableColumn fx:id="quantityTblCol" prefWidth="103.0" text="Quantity" />
+          <TableColumn fx:id="priceTblCol" minWidth="0.0" prefWidth="103.0" text="Price" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
