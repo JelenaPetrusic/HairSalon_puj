@@ -15,30 +15,30 @@
 <AnchorPane minHeight="700.0" minWidth="700.0" onMouseClicked="#remove" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jlm.hairsalon.controller.TaskController">
    <children>
       <fx:include source="sidebar.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <AnchorPane layoutX="157.0" layoutY="100.0" prefHeight="200.0" style="-fx-background-color: #f3bfff; -fx-border-color: #facaf5;" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+      <AnchorPane layoutX="157.0" layoutY="100.0" prefHeight="200.0" style="-fx-background-color: #f3bfff; " AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
       <children>
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tasks information" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="7.0">
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Informacije o zadacima " AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="10.0">
             <font>
-               <Font size="30.0" />
+               <Font name="Times new roman" size="30.0" />
             </font>
          </Text>
-         <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Search the task" textAlignment="RIGHT" AnchorPane.rightAnchor="700.0" AnchorPane.topAnchor="45.0">
+         <!--<Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: white; -fx-background-radius: 20;" text="Pretraži zadatak" textAlignment="RIGHT" AnchorPane.rightAnchor="380.0" AnchorPane.topAnchor="50.0">
             <font>
-               <Font size="14.0" />
+               <Font name="Times new roman" size="14.0" />
             </font>
-         </Label>
-         <TextField fx:id="searchTxt" prefHeight="30.0" prefWidth="310.0" promptText="Typing..." style="-fx-background-color: white; -fx-background-radius: 50;" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="45.0" />
-         <ComboBox fx:id="selectHairdresser" prefHeight="30.0" prefWidth="130.0" promptText="Select hairdresser" stylesheets="@../../../Css/style.css" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="90.0">
+         </Label>-->
+         <TextField fx:id="searchTxt" prefHeight="30.0" prefWidth="510.0" promptText="Pretraži zadatak..." style="-fx-background-color: white; -fx-background-radius: 60;" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="50.0" />
+         <ComboBox fx:id="selectHairdresser" prefHeight="30.0" prefWidth="130.0" promptText="Odaberi frizera" stylesheets="@../../../Css/style.css" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="90.0">
             <styleClass>
                <String fx:value="list-view" />
                <String fx:value="combo-box" />
             </styleClass></ComboBox>
-         <ComboBox fx:id="selectClient" prefHeight="30.0" prefWidth="130.0" promptText="Select client" stylesheets="@../../../Css/style.css" AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="90.0">
+         <ComboBox fx:id="selectClient" prefHeight="30.0" prefWidth="130.0" promptText="Odaberi klijenta" stylesheets="@../../../Css/style.css" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="90.0">
             <styleClass>
                <String fx:value="list-view" />
                <String fx:value="combo-box" />
             </styleClass></ComboBox>
-         <DatePicker fx:id="datePick" prefHeight="30.0" prefWidth="180.0" promptText="Pick a date" stylesheets="@../../../Css/date-picker.css" AnchorPane.leftAnchor="475.0" AnchorPane.topAnchor="90.0">
+         <DatePicker fx:id="datePick" prefHeight="30.0" prefWidth="180.0" promptText="Odaberi datum" stylesheets="@../../../Css/date-picker.css" AnchorPane.leftAnchor="515.0" AnchorPane.topAnchor="90.0">
             <styleClass>
                <String fx:value="arrow" />
                <String fx:value="arrow-button" />
@@ -54,32 +54,32 @@
                <String fx:value="spinner" />
                <String fx:value="week-number-cell" />
             </styleClass></DatePicker>
-         <Button fx:id="btnPreview" mnemonicParsing="false" onAction="#onPreview" prefHeight="30.0" prefWidth="90.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Preview" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="145.0">
+         <Button fx:id="btnPreview" mnemonicParsing="false" onAction="#onPreview" prefHeight="30.0" prefWidth="90.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Pregled" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="135.0">
             <font>
-               <Font size="14.0" />
+               <Font name="Times new roman"  size="14.0" />
             </font></Button>
-         <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#onDelete" prefHeight="30.0" prefWidth="90.0" styleClass="danger-button" stylesheets="@../../../Css/style.css" text="Delete" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="145.0">
+         <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#onDelete" prefHeight="30.0" prefWidth="90.0" styleClass="danger-button" stylesheets="@../../../Css/style.css" text="Izbriši" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="135.0">
             <font>
-               <Font size="14.0" />
+               <Font name="Times new roman" size="14.0" />
             </font></Button>
-         <Button fx:id="btnSave" mnemonicParsing="false" onAction="#onSave" prefHeight="30.0" prefWidth="90.0" styleClass="success-button" stylesheets="@../../../Css/style.css" text="Add task" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="145.0">
+         <Button fx:id="btnSave" mnemonicParsing="false" onAction="#onSave" prefHeight="30.0" prefWidth="90.0" styleClass="success-button" stylesheets="@../../../Css/style.css" text="Dodaj zadatak" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="135.0">
             <font>
-               <Font size="14.0" />
+               <Font name="Times new roman" size="14.0" />
             </font></Button>
-         <Button fx:id="btnAddService" mnemonicParsing="false" onAction="#onAddService" prefHeight="30.0" prefWidth="115.0" styleClass="success-button" stylesheets="@../../../Css/style.css" text="Add service" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="145.0">
+         <Button fx:id="btnAddService" mnemonicParsing="false" onAction="#onAddService" prefHeight="30.0" prefWidth="115.0" styleClass="success-button" stylesheets="@../../../Css/style.css" text="Dodaj uslugu" AnchorPane.leftAnchor="550.0" AnchorPane.topAnchor="135.0">
             <font>
-               <Font size="14.0" />
+               <Font name="Times new roman" size="14.0" />
             </font></Button>
       </children>
    </AnchorPane>
-      <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="300.0">
+      <AnchorPane prefHeight="500.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="280.0">
          <children>
-            <TableView fx:id="tasksTbl" layoutX="7.0" onMouseClicked="#selectTask" prefHeight="375.0" prefWidth="1043.0" style="-fx-background-color: #e8a2e1; -fx-border-color: #ffe3fc;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TableView fx:id="tasksTbl" onMouseClicked="#selectTask" style="-fx-background-color: #f3bfff; -fx-border-color: #facaf5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <columns>
                   <TableColumn fx:id="IDTblCol" minWidth="20.0" prefWidth="260.0" text="ID" />
-                  <TableColumn fx:id="hairdresserTblCol" minWidth="20.0" prefWidth="260.0" style="-fx-alignment: center;" text="Hairdresser " />
-                  <TableColumn fx:id="clientTblCol" prefWidth="260.0" style="-fx-alignment: center;" text="Client" />
-                  <TableColumn fx:id="dateTblCol" minWidth="20.0" prefWidth="261.0" style="-fx-alignment: center;" text="Date" />
+                  <TableColumn fx:id="hairdresserTblCol" minWidth="20.0" prefWidth="260.0" style="-fx-alignment: center;" text="Frizer " />
+                  <TableColumn fx:id="clientTblCol" prefWidth="260.0" style="-fx-alignment: center;" text="Klijent" />
+                  <TableColumn fx:id="dateTblCol" minWidth="20.0" prefWidth="260.0" style="-fx-alignment: center;" text="Datum" />
                </columns>
             </TableView>
          </children>

@@ -4,6 +4,7 @@ import com.jlm.hairsalon.model.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.lang.reflect.Field;
@@ -19,7 +20,7 @@ public class  Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         Main.primaryStage = stage;
-        Main.showWindow("login.fxml","Prijavite se na sustav", 400, 360);
+        Main.showWindow("login.fxml","  Prijavite se na sustav", 600, 500);
     }
 
     public static void showWindow(String viewName, String title, int w, int h) throws IOException {

@@ -1,17 +1,17 @@
 .danger-button
 {
--fx-background-color: #d9534f;
+-fx-background-color: #f7544f;
     -fx-background-radius: 25;
     -fx-background-insets: 0;
     -fx-text-fill: white;
 }
 .danger-button:hover
 {
--fx-background-color:#f7163c;
+-fx-background-color:#fc032d;
 }
 .combo-box
 {
--fx-border-color:#ACACAC;
+-fx-border-color:#fcdcfa;
 -fx-border-width:0.5px;
 -fx-border-radius:50px;
 -fx-background-radius:50px;
@@ -22,7 +22,7 @@
 }
 .list-view
 {
--fx-border-color:#ACACAC;
+-fx-border-color:#fcdcfa;
 -fx-border-width:0.5px;
 -fx-padding:0px;
 -fx-background-color:white;
@@ -31,14 +31,14 @@
 }
 .success-button
 {
--fx-background-color: #5cb85c;
+-fx-background-color: #8bf08b;
     -fx-background-radius: 25;
     -fx-background-insets: 0;
     -fx-text-fill: white;
 }
 .success-button:hover
 {
--fx-background-color:#2a9320;
+-fx-background-color:#17910c;
 }
 .info-button
 {
@@ -49,7 +49,7 @@
 }
 .info-button:hover
 {
--fx-background-color:##e6feff;
+-fx-background-color:#facaf5;
 }
 .text-field
 {

@@ -42,6 +42,7 @@ public class HairdresserProfileController implements Initializable {
     @FXML
     private TextField userNameTxt;
 
+    @FXML
     private TableView tasksTbl;
     HairdresserView selectedTask=null;
 
@@ -98,5 +99,35 @@ public class HairdresserProfileController implements Initializable {
 
     }
 
+    @FXML
+    public void selectTask(MouseEvent evt) throws Exception {
+        this.selectedTask = (HairdresserView)  this.tasksTbl.getSelectionModel().getSelectedItem();
+    }
+    @FXML
+    public void taskDetails(ActionEvent event) throws Exception {
+        if(selectedTask!=null)
+        {
+            Task t=new Task();
+
+            t.setId(this.selectedTask.getTaskId());
+            t.setDate(Date.valueOf(this.selectedTask.getDate()));
+            t.setClient_FK(this.selectedTask.getClientId());
+
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(Main.class.getResource("invoice.fxml"));
+            Parent root = fxmlLoader.load();
+            InvoiceController incont = fxmlLoader.getController();
+            incont.setSelectedTask(t);
+            incont.initController();
+            Stage stage = new Stage();
+            stage.setTitle("View services");
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        }
+    }
+    @FXML
+    public void remove(MouseEvent event) {
+        tasksTbl.getSelectionModel().clearSelection();
+    }
 
 }

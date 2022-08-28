@@ -8,34 +8,34 @@
 
 <AnchorPane style="-fx-padding: 5; -fx-background-color: #f3bfff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jlm.hairsalon.controller.SidebarController">
     <children>
-          <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnLogoutClicked" prefHeight="40.0" prefWidth="110.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Logout" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+          <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnLogoutClicked" prefHeight="75.0" prefWidth="160.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Vrati se" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
          <font>
-            <Font size="18.0" />
+            <Font name="Times new roman" size="18.0" />
          </font>
       </Button>
-          <VBox layoutX="15.0" layoutY="120.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="160.0" spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="115.0">
+          <VBox layoutX="15.0" layoutY="120.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="160.0" spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="280.0">
               <children>
-                  <Button mnemonicParsing="false" onAction="#btnTasksClicked" prefHeight="75.0" prefWidth="150.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Tasks">
+                  <Button mnemonicParsing="false" onAction="#btnTasksClicked" prefHeight="75.0" prefWidth="150.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Zadaci">
                       <VBox.margin>
                           <Insets />
                       </VBox.margin>
                       <font>
-                          <Font name="Georgia" size="18.0" />
+                          <Font name="Times new roman" size="18.0" />
                       </font>
             </Button>
-                  <Button fx:id="btnUsers" mnemonicParsing="false" onAction="#btnUsersClicked" prefHeight="75.0" prefWidth="150.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Users">
+                  <Button fx:id="btnUsers" mnemonicParsing="false" onAction="#btnUsersClicked" prefHeight="75.0" prefWidth="150.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Korisnici">
                       <font>
-                          <Font name="Georgia" size="18.0" />
+                          <Font name= "Times new roman" size="18.0" />
                       </font>
             </Button>
-                  <Button mnemonicParsing="false" onAction="#btnServicesClicked" prefHeight="75.0" prefWidth="150.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Services">
+                  <Button mnemonicParsing="false" onAction="#btnServicesClicked" prefHeight="75.0" prefWidth="150.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Usluge">
                       <font>
-                          <Font name="Georgia" size="18.0" />
+                          <Font name="Times new roman" size="18.0" />
                       </font>
             </Button>
-                  <Button mnemonicParsing="false" onAction="#btnClientsClicked" prefHeight="75.0" prefWidth="150.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Clients">
+                  <Button mnemonicParsing="false" onAction="#btnClientsClicked" prefHeight="75.0" prefWidth="150.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Klijenti">
                       <font>
-                          <Font name="Georgia" size="18.0" />
+                          <Font name="Times new roman" size="18.0" />
                       </font>
             </Button>
               </children>

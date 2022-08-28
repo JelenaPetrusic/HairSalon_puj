@@ -6,19 +6,19 @@
 
 <AnchorPane style="-fx-background-color: #f3bfff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jlm.hairsalon.controller.HairdresserViewController">
    <children>
-      <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#myTasks" prefHeight="40.0" prefWidth="110.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="My tasks" AnchorPane.rightAnchor="270.0" AnchorPane.topAnchor="25.0">
+      <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#myTasks" prefHeight="40.0" prefWidth="110.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Moji zadaci" AnchorPane.rightAnchor="270.0" AnchorPane.topAnchor="25.0">
          <font>
-            <Font size="14.0" />
+            <Font name="Times new roman" size="14.0" />
          </font>
       </Button>
-      <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#myProfile" prefHeight="40.0" prefWidth="110.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="My profile" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="25.0">
+      <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#myProfile" prefHeight="40.0" prefWidth="110.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Moj profil" AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="25.0">
          <font>
-            <Font size="14.0" />
+            <Font name="Times new roman" size="14.0" />
          </font>
       </Button>
-      <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="110.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Logout" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="25.0">
+      <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="110.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Odjava" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="25.0">
          <font>
-            <Font size="14.0" />
+            <Font name="Times new roman" size="14.0" />
          </font>
       </Button>
    </children>

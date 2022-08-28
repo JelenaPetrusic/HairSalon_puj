@@ -6,15 +6,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane onMouseClicked="#remove" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jlm.hairsalon.controller.HairdresserProfileController">
+<AnchorPane onMouseClicked="#remove" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jlm.hairsalon.controller.HairdresserProfileController">
     <children>
         <fx:include source="hairdresserView.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-    <TableView fx:id="tasksTbl" minHeight="400.0" minWidth="500.0" onMouseClicked="#selectTask" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="150.0">
+    <TableView fx:id="tasksTbl" minHeight="200.0" minWidth="300.0" onMouseClicked="#selectTask" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="150.0">
         <columns>
             <TableColumn fx:id="idTblCol" prefWidth="189.0" text="Task ID" />
-            <TableColumn fx:id="clientNameTblCol" prefWidth="189.0" style="-fx-alignment: center;" text="Client name" />
-            <TableColumn fx:id="clientAddressTblCol" prefWidth="189.0" style="-fx-alignment: center;" text="Client address" />
-            <TableColumn fx:id="taskDateTblCol" prefWidth="189.0" style="-fx-alignment: center;" text="Date" />
+            <TableColumn fx:id="clientNameTblCol" prefWidth="189.0" style="-fx-alignment: center;" text="Ime klijenta" />
+            <TableColumn fx:id="clientAddressTblCol" prefWidth="189.0" style="-fx-alignment: center;" text="Adresa klijenta" />
+            <TableColumn fx:id="taskDateTblCol" prefWidth="189.0" style="-fx-alignment: center;" text="Datum" />
         </columns>
     </TableView>
     <Button fx:id="previewBtn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#taskDetails" prefHeight="35.0" prefWidth="100.0" styleClass="info-button" stylesheets="@../../../Css/style.css" text="Preview" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="100.0">
