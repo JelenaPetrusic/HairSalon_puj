@@ -1069,12 +1069,12 @@ public class SessionTest extends DevApiBaseTestCase {
     @Test
     public void testBug28616573() throws Exception {
         RowResult res = this.session.sql(
-                "select @@global.mysqlx_max_connections, VARIABLE_VALUE FROM performance_schema.global_status WHERE VARIABLE_NAME='Mysqlx_worker_threads_active'")
+                "select @@global.mysqlx_max_connections, VARIABLE_VALUE FROM performance_schema.global_status WHERE VARIABLE_NAME='Mysqlx_hairdresser_threads_active'")
                 .execute();
         Row r = res.next();
         int mysqlxMaxConnections = r.getInt(0);
-        int mysqlWorkerThreadsActive = Integer.parseInt(r.getString(1));
-        this.session.sql("SET @@global.mysqlx_max_connections=" + (mysqlWorkerThreadsActive + 2)).execute(); // allow only 2 additional connections
+        int mysqlHairdresserThreadsActive = Integer.parseInt(r.getString(1));
+        this.session.sql("SET @@global.mysqlx_max_connections=" + (mysqlHairdresserThreadsActive + 2)).execute(); // allow only 2 additional connections
 
         Properties props = new Properties();
         props.setProperty(ClientProperty.POOLING_ENABLED.getKeyName(), "true");

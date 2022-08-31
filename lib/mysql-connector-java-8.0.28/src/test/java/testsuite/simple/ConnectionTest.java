@@ -1024,7 +1024,7 @@ public class ConnectionTest extends BaseTestCase {
     public void testLocalSocketAddress() throws Exception {
         Enumeration<NetworkInterface> allInterfaces = NetworkInterface.getNetworkInterfaces();
 
-        SpawnedWorkerCounter counter = new SpawnedWorkerCounter();
+        SpawnedHairdresserCounter counter = new SpawnedHaidresserCounter();
 
         List<LocalSocketAddressCheckThread> allChecks = new ArrayList<>();
 
@@ -1036,7 +1036,7 @@ public class ConnectionTest extends BaseTestCase {
             allChecks.add(new LocalSocketAddressCheckThread(allAddresses, counter));
         }
 
-        counter.setWorkerCount(allChecks.size());
+        counter.setHairdresserCount(allChecks.size());
 
         for (LocalSocketAddressCheckThread t : allChecks) {
             t.start();
@@ -1045,11 +1045,11 @@ public class ConnectionTest extends BaseTestCase {
         // Wait for tests to complete....
         synchronized (counter) {
 
-            while (counter.workerCount > 0 /* safety valve */) {
+            while (counter.hairdresserCount > 0 /* safety valve */) {
 
                 counter.wait();
 
-                if (counter.workerCount == 0) {
+                if (counter.hairdresserCount == 0) {
                     System.out.println("Done!");
                     break;
                 }
@@ -1068,15 +1068,15 @@ public class ConnectionTest extends BaseTestCase {
         assertTrue(didOneWork, "At least one connection was made with the localSocketAddress set");
     }
 
-    class SpawnedWorkerCounter {
-        protected int workerCount = 0;
+    class SpawnedHairdresserCounter {
+        protected int hairdresserCount = 0;
 
-        synchronized void setWorkerCount(int i) {
-            this.workerCount = i;
+        synchronized void setHairdresserCount(int i) {
+            this.hairdresserCount = i;
         }
 
-        synchronized void decrementWorkerCount() {
-            this.workerCount--;
+        synchronized void decrementHairdresserCount() {
+            this.hairdresserCount--;
             notify();
         }
     }
@@ -1084,9 +1084,9 @@ public class ConnectionTest extends BaseTestCase {
     class LocalSocketAddressCheckThread extends Thread {
         boolean atLeastOneWorked = false;
         Enumeration<InetAddress> allAddresses = null;
-        SpawnedWorkerCounter counter = null;
+        SpawnedHairdresserCounter counter = null;
 
-        LocalSocketAddressCheckThread(Enumeration<InetAddress> e, SpawnedWorkerCounter c) {
+        LocalSocketAddressCheckThread(Enumeration<InetAddress> e, SpawnedHairdresserCounter c) {
             this.allAddresses = e;
             this.counter = c;
         }
@@ -1113,7 +1113,7 @@ public class ConnectionTest extends BaseTestCase {
                 }
             }
 
-            this.counter.decrementWorkerCount();
+            this.counter.decrementHairdesserCount();
         }
     }
 

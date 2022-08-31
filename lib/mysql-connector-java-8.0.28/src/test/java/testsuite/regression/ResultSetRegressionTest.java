@@ -2926,7 +2926,7 @@ public class ResultSetRegressionTest extends BaseTestCase {
     }
 
     /**
-     * Tests fix for BUG#25517 - Statement.setMaxRows() is not effective on result sets materialized from cursors.
+     * Tests fix for BUG#25517 - Statement.setMaxRows() is not effective on result sets serviceized from cursors.
      * 
      * @throws Exception
      */

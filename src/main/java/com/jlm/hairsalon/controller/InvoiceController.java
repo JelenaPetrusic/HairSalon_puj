@@ -106,7 +106,7 @@ public class InvoiceController implements Initializable {
     }
 
     public ResultSet makeQuery() throws SQLException {
-        String SQL = "SELECT ServiceStock.id, ServiceStock.name, SUM(ServicesRendered.quantity),ServiceStock.sellingPrice FROM Task LEFT JOIN ServicesRendered ON Task.id = ServicesRendered.task_FK LEFT JOIN ServiceStock ON ServicesRendered.materialStock_FK = ServiceStock.id WHERE Task.id="+selectedTask.getId()+" GROUP BY ServiceStock.name ";
+        String SQL = "SELECT ServiceStock.id, ServiceStock.name, SUM(ServicesRendered.quantity),ServiceStock.Price FROM Task LEFT JOIN ServicesRendered ON Task.id = ServicesRendered.task_FK LEFT JOIN ServiceStock ON ServicesRendered.serviceStock_FK = ServiceStock.id WHERE Task.id="+selectedTask.getId()+" GROUP BY ServiceStock.name ";
         Statement stmt = DatabaseConnection.CONNECTION.createStatement();
         ResultSet rs = stmt.executeQuery(SQL);
         return rs;

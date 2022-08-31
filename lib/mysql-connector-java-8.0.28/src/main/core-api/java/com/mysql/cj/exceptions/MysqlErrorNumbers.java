@@ -925,7 +925,7 @@ public final class MysqlErrorNumbers {
     public final static int ER_MTS_CHANGE_MASTER_CANT_RUN_WITH_GAPS = 1802;
     public final static int ER_MTS_CHANGE_SOURCE_CANT_RUN_WITH_GAPS = 1802; //SQLSTATE: HY000 Message: CHANGE SOURCE cannot be executed when the replica was stopped with an error or killed in MTS mode. Consider using RESET REPLICA or START REPLICA UNTIL.
     public final static int ER_MTS_RECOVERY_FAILURE = 1803; //SQLSTATE: HY000 Message: Cannot recover after REPLICA errored out in parallel execution mode. Additional error messages can be found in the MySQL error log.
-    public final static int ER_MTS_RESET_WORKERS = 1804; //SQLSTATE: HY000 Message: Cannot clean up worker info tables. Additional error messages can be found in the MySQL error log.
+    public final static int ER_MTS_RESET_HAIRDRESSERS= 1804; //SQLSTATE: HY000 Message: Cannot clean up hairdresser info tables. Additional error messages can be found in the MySQL error log.
     public final static int ER_COL_COUNT_DOESNT_MATCH_CORRUPTED_V2 = 1805; //SQLSTATE: HY000 Message: Column count of %s.%s is wrong. Expected %d, found %d. The table is probably corrupted
     @Deprecated
     public final static int ER_SLAVE_SILENT_RETRY_TRANSACTION = 1806;
@@ -989,7 +989,7 @@ public final class MysqlErrorNumbers {
     public final static int ER_ALTER_OPERATION_NOT_SUPPORTED_REASON_NOT_NULL = 1861; //SQLSTATE: HY000 Message: cannot silently convert NULL values, as required in this SQL_MODE; was introduced in 5.7.1.
     public final static int ER_MUST_CHANGE_PASSWORD_LOGIN = 1862; //SQLSTATE: HY000 Message: Your password has expired. To log in you must change it using a client that supports expired passwords. was introduced in 5.7.1.
     public final static int ER_ROW_IN_WRONG_PARTITION = 1863; //SQLSTATE: HY000 Message: Found a row in wrong partition %s; was introduced in 5.7.1.
-    public final static int ER_MTS_EVENT_BIGGER_PENDING_JOBS_SIZE_MAX = 1864; //SQLSTATE: HY000 Message: Cannot schedule event %s, relay-log name %s, position %s to Worker thread because its size %lu exceeds %lu of replica_pending_jobs_size_max.; was introduced in 5.7.2.
+    public final static int ER_MTS_EVENT_BIGGER_PENDING_JOBS_SIZE_MAX = 1864; //SQLSTATE: HY000 Message: Cannot schedule event %s, relay-log name %s, position %s to Hairdressser thread because its size %lu exceeds %lu of replica_pending_jobs_size_max.; was introduced in 5.7.2.
 
     public final static int ER_INNODB_NO_FT_USES_PARSER = 1865; //SQLSTATE: HY000 Message: Cannot CREATE FULLTEXT INDEX WITH PARSER on InnoDB table; was introduced in 5.7.2.
     public final static int ER_BINLOG_LOGICAL_CORRUPTION = 1866; //SQLSTATE: HY000 Message: The binary log file '%s' is logically corrupted: %s; was introduced in 5.7.2.
@@ -1039,7 +1039,7 @@ public final class MysqlErrorNumbers {
     @Deprecated
     public final static int ER_SLAVE_SQL_THREAD_MUST_STOP = 1900;
     public final static int ER_REPLICA_SQL_THREAD_MUST_STOP = 1900; //SQLSTATE: HY000 Message: This operation cannot be performed with a running replica sql thread; run STOP REPLICA SQL_THREAD first; was introduced in 5.7.3.
-    public final static int ER_NO_FT_MATERIALIZED_SUBQUERY = 1901; //SQLSTATE: HY000 Message: Cannot create FULLTEXT index on materialized subquery; was introduced in 5.7.4.
+    public final static int ER_NO_FT_SERVICEIZED_SUBQUERY = 1901; //SQLSTATE: HY000 Message: Cannot create FULLTEXT index on materialized subquery; was introduced in 5.7.4.
     public final static int ER_INNODB_UNDO_LOG_FULL = 1902; //SQLSTATE: HY000 Message: Undo Log error: %s; was introduced in 5.7.4.
     public final static int ER_INVALID_ARGUMENT_FOR_LOGARITHM = 1903; //SQLSTATE: 2201E Message: Invalid argument for logarithm; was introduced in 5.7.4.
     @Deprecated

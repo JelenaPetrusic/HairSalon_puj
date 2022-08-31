@@ -1,5 +1,7 @@
 package com.jlm.hairsalon.model;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.lang.reflect.Field;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -226,7 +228,7 @@ public class Table {
         return list;
     }
 
-    public static List<ServicesRendered> servicesRendered(ResultSet rs) throws Exception {
+    public static @NotNull List<ServicesRendered> servicesRendered(ResultSet rs) throws Exception {
         List<ServicesRendered> list = new ArrayList<>();
         while(rs.next()){
             ServicesRendered mc = new ServicesRendered();

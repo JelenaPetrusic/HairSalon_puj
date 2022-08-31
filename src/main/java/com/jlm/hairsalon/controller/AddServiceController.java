@@ -101,10 +101,10 @@ public class AddServiceController implements Initializable {
     @FXML
     public void onSave(ActionEvent event) throws Exception {
 
-        boolean isSelectMaterialEmpty =(this.selectService.getValue() == null);
+        boolean isSelectServiceEmpty =(this.selectService.getValue() == null);
 
 
-        if ( isSelectMaterialEmpty || quantityTxt.getText().equals("") || !isNumeric(quantityTxt.getText()) ) {
+        if ( isSelectServiceEmpty || quantityTxt.getText().equals("") || !isNumeric(quantityTxt.getText()) ) {
             Alert alert = new Alert(Alert.AlertType.WARNING, "All fields are mandatory and quantity must be a number!", ButtonType.OK);
             alert.setTitle("Warning");
             alert.setHeaderText("Input error!");
@@ -212,13 +212,13 @@ public class AddServiceController implements Initializable {
             selectService.setItems(observableServiceStockList);
 
             idTblCol.setCellValueFactory(
-                    (Callback<TableColumn.CellDataFeatures<ServicesRendered, Long>, SimpleLongProperty>) materialConsumptionLongCellDataFeatures -> new SimpleLongProperty(materialConsumptionLongCellDataFeatures.getValue().getId())
+                    (Callback<TableColumn.CellDataFeatures<ServicesRendered, Long>, SimpleLongProperty>) ServicesRenderedLongCellDataFeatures -> new SimpleLongProperty(ServicesRenderedLongCellDataFeatures.getValue().getId())
             );
 
             nameTblCol.setCellValueFactory(
-                    (Callback<TableColumn.CellDataFeatures<ServicesRendered, String>, SimpleStringProperty>) materialConsumptionStringCellDataFeatures -> {
+                    (Callback<TableColumn.CellDataFeatures<ServicesRendered, String>, SimpleStringProperty>) ServicesRenderedStringCellDataFeatures -> {
                         try {
-                            return new SimpleStringProperty(materialConsumptionStringCellDataFeatures.getValue().getServiceStock().getName());
+                            return new SimpleStringProperty(ServicesRenderedStringCellDataFeatures.getValue().getServiceStock().getName());
                         } catch (Exception e) {
                             e.getMessage();
                         }
@@ -226,12 +226,12 @@ public class AddServiceController implements Initializable {
                     }
             );
             quantityTblCol.setCellValueFactory(
-                    (Callback<TableColumn.CellDataFeatures<ServicesRendered, Double>, SimpleDoubleProperty>) materialConsumptionSDoubleCellDataFeatures -> new SimpleDoubleProperty(materialConsumptionSDoubleCellDataFeatures.getValue().getQuantity())
+                    (Callback<TableColumn.CellDataFeatures<ServicesRendered, Double>, SimpleDoubleProperty>) ServicesRenderedSDoubleCellDataFeatures -> new SimpleDoubleProperty(ServicesRenderedSDoubleCellDataFeatures.getValue().getQuantity())
             );
             priceTblCol.setCellValueFactory(
-                    (Callback<TableColumn.CellDataFeatures<ServicesRendered, Double>, SimpleDoubleProperty>) materialConsumptionSDoubleCellDataFeatures -> {
+                    (Callback<TableColumn.CellDataFeatures<ServicesRendered, Double>, SimpleDoubleProperty>) ServicesRenderedSDoubleCellDataFeatures -> {
                         try {
-                            return new SimpleDoubleProperty(materialConsumptionSDoubleCellDataFeatures.getValue().getServiceStock().getPrice());
+                            return new SimpleDoubleProperty(ServicesRenderedSDoubleCellDataFeatures.getValue().getServiceStock().getPrice());
                         } catch (Exception e) {
                             e.getMessage();
                         }
@@ -290,7 +290,7 @@ public class AddServiceController implements Initializable {
     }
 
     public ResultSet makeSelectQuery() throws SQLException {
-        String SQL = "SELECT ServicesRendered.id,ServicesRendered.serviceStock_FK,ServicesRendered.task_FK,ServicesRendered.quantity FROM Task LEFT JOIN ServicesRendered ON Task.id = ServicesRendered.task_FK LEFT JOIN ServicesRendered ON ServicesRendered.materialStock_FK = ServicesRendered.id WHERE Task.id="+this.selectedTask.getId();
+        String SQL = "SELECT ServicesRendered.id,ServicesRendered.serviceStock_FK,ServicesRendered.task_FK,ServicesRendered.quantity FROM Task LEFT JOIN ServicesRendered ON Task.id = ServicesRendered.task_FK LEFT JOIN ServicesRendered ON ServicesRendered.serviceStock_FK = ServicesRendered.id WHERE Task.id="+this.selectedTask.getId();
         Statement stmt = DatabaseConnection.CONNECTION.createStatement();
         ResultSet rs = stmt.executeQuery(SQL);
         return rs;

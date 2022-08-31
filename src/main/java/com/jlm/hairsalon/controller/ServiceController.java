@@ -92,7 +92,7 @@ public class ServiceController implements Initializable {
 
         if (name.equals("")|| Price.equals("")|| quantity==null || !isNumeric(Price)  || !isNumeric(quantity))
         {
-            Alert alert = new Alert(Alert.AlertType.WARNING, "All fields are mandatory!Quantity,selling and purchase price must be a number", ButtonType.OK);
+            Alert alert = new Alert(Alert.AlertType.WARNING, "All fields are mandatory!Quantity and price must be a number", ButtonType.OK);
             alert.setTitle("Warning");
             alert.setHeaderText("Input error!");
             alert.showAndWait();

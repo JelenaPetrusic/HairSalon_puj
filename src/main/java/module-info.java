@@ -9,6 +9,7 @@ module com.jlm.hairsalon {
     //requires validatorfx;
     //requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
+    requires org.jetbrains.annotations;
     //requires eu.hansolo.tilesfx;
 
     opens com.jlm.hairsalon to javafx.fxml;

@@ -7196,7 +7196,7 @@ public class ConnectionRegressionTest extends BaseTestCase {
      * {@link ReplicationConnection}s from a given {@link ReplicationConnectionGroup}.
      * 
      * This test is unable to cover the failing scenario since the fix in the main code was also reproduced here, with the addition of the {@link ReentrantLock}
-     * {@code singleSynchWorkerMonitor} in the {@link TestBug21934573ExceptionInterceptor} the same way as in {@code ErrorReportingExceptionInterceptor}. The
+     * {@code singleSynchHairdresserMonitor} in the {@link TestBug21934573ExceptionInterceptor} the same way as in {@code ErrorReportingExceptionInterceptor}. The
      * way to reproduce it and observe the deadlock happening is by setting the connection property {@code __useReplConnGroupLocks__} to {@code False}.
      * 
      * WARNING! If this test fails there is no guarantee that the JVM will remain stable and won't affect any other tests. It is imperative that this test

@@ -12,7 +12,7 @@
    <children>
       <AnchorPane prefHeight="220.0" style="-fx-background-color: #f3bfff; -fx-border-color: #facaf5;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="150.0" text="INVOICE" textAlignment="CENTER" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="25.0">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="150.0" text="RAČUN" textAlignment="CENTER" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="25.0">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
@@ -37,39 +37,39 @@
                <image>
                   <Image url="@images/hairsalon.png" />
                </image></ImageView>
-            <Label fx:id="clientNameLbl" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="Name" AnchorPane.bottomAnchor="110.0" AnchorPane.rightAnchor="10.0">
+            <Label fx:id="clientNameLbl" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="Ime" AnchorPane.bottomAnchor="110.0" AnchorPane.rightAnchor="10.0">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font></Label>
-            <Label fx:id="clientAdressLbl" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="Address" AnchorPane.bottomAnchor="90.0" AnchorPane.rightAnchor="10.0">
+            <Label fx:id="clientAdressLbl" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="Adresa" AnchorPane.bottomAnchor="90.0" AnchorPane.rightAnchor="10.0">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font></Label>
-            <Label fx:id="clientPhoneLbl" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="Phone" AnchorPane.bottomAnchor="70.0" AnchorPane.rightAnchor="10.0">
+            <Label fx:id="clientPhoneLbl" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="Telefon" AnchorPane.bottomAnchor="70.0" AnchorPane.rightAnchor="10.0">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font></Label>
-            <Label fx:id="clientIdLbl" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="CostumerID" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="10.0">
+            <Label fx:id="clientIdLbl" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="IDKlijenta" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="10.0">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font></Label>
-            <Label fx:id="invoiceLbl" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="INVOICE#" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="10.0">
+            <Label fx:id="invoiceLbl" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="br računa" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="10.0">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font></Label>
-            <Label fx:id="dateLbl" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="Date" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <Label fx:id="dateLbl" alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="Datum" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font></Label>
-            <Label prefHeight="20.0" prefWidth="80.0" text="CostumerID" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="160.0">
+            <Label prefHeight="20.0" prefWidth="80.0" text="IDKlijenta" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="160.0">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font></Label>
-            <Label prefHeight="20.0" prefWidth="80.0" text="INVOICE#" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="160.0">
+            <Label prefHeight="20.0" prefWidth="80.0" text="br računa" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="160.0">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font></Label>
-            <Label prefHeight="20.0" prefWidth="80.0" text="Date" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="160.0">
+            <Label prefHeight="20.0" prefWidth="80.0" text="Datum" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="160.0">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font></Label>

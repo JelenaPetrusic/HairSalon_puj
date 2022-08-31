@@ -2710,7 +2710,7 @@ nn-nn-07 - Version 5.0.9
       MySQL-5.0+ enables the use of cursors that allow Connector/J to save
       memory by fetching result set rows in chunks (where the chunk size
       is set by calling setFetchSize() on a Statement or ResultSet) by
-      using fully-materialized cursors on the server.
+      using fully-serviceized cursors on the server.
 
       The driver will will now automatically set "useServerPrepStmts" to
       "true" when "useCursorFetch" has been set to "true", since the feature
@@ -2834,7 +2834,7 @@ nn-nn-07 - Version 5.0.9
 	  misleading error message.
 
 	- Fixed BUG#25517 - Statement.setMaxRows() is not effective on result
-	  sets materialized from cursors.
+	  sets serviceized from cursors.
 
 	- New configuration property, "enableQueryTimeouts" (default "true").
 	  When enabled, query timeouts set via Statement.setQueryTimeout() use a

@@ -78,7 +78,7 @@ public class HairdresserTaskController implements Initializable {
     }
 
     public ResultSet makeQueryforTasks()throws SQLException {
-        String SQL = "SELECT Task.id,Client.firstName,Client.address,Task.date,Client.id FROM Client LEFT JOIN Task ON Client.id = Task.Client_FK LEFT JOIN User ON User_FK=User.id  WHERE Task.User_FK="+ LoginController.loggedUser.getId();
+        String SQL = "SELECT Task.id,Client.firstName,Client.address,Task.date,Client.id FROM Client LEFT JOIN Task ON Client.id = Task.client_FK LEFT JOIN User ON User_FK=User.id  WHERE Task.User_FK="+ LoginController.loggedUser.getId();
         Statement stmt = DatabaseConnection.CONNECTION.createStatement();
         ResultSet rs = stmt.executeQuery(SQL);
         return rs;
